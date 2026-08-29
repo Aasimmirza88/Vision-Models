@@ -1,0 +1,16 @@
+# Dataset
+Flowers_dataset/
+**/Flowers_dataset/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
