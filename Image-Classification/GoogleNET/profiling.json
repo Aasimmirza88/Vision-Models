@@ -1,0 +1,10 @@
+{
+  "total_parameters": 5605029,
+  "trainable_parameters": 5125,
+  "model_size_mb": 21.381488800048828,
+  "inference_time_per_batch_ms": 15.55417800322175,
+  "throughput_images_per_sec": 64.29140773577807,
+  "model_summary": "torchsummary not available",
+  "flops_G": null,
+  "params_M": null
+}

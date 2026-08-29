@@ -1,0 +1,133 @@
+# Configuration for Flower Classification Training
+# Hardware: GTX 1650 (4GB VRAM) - optimized settings
+
+project:
+  name: "flower-classification"
+  dataset_path: "E:/GIt_upload/Image_classification/Flowers_dataset"
+  num_classes: 5
+  class_names: ["Lilly", "Lotus", "Orchid", "Sunflower", "Tulip"]
+  output_dir: "E:/GIt_upload/Image_classification/results"
+  logs_dir: "E:/GIt_upload/Image_classification/logs"
+
+# Reproducibility
+reproducibility:
+  seed: 42
+  deterministic: true
+  benchmark: false
+
+# Data settings
+data:
+  train_split: 0.8
+  val_split: 0.2
+  input_size: 224
+  batch_size: 16  # Reduced for 4GB VRAM
+  num_workers: 4
+  pin_memory: true
+  # Augmentation
+  train_transforms:
+    - "RandomResizedCrop"
+    - "RandomHorizontalFlip"
+    - "RandomRotation"
+    - "ColorJitter"
+  val_transforms:
+    - "Resize"
+    - "CenterCrop"
+  normalize_mean: [0.485, 0.456, 0.406]
+  normalize_std: [0.229, 0.224, 0.225]
+
+# Training settings
+training:
+  epochs: 50
+  learning_rate: 0.001
+  weight_decay: 1e-4
+  optimizer: "Adam"
+  scheduler: "ReduceLROnPlateau"
+  scheduler_params:
+    mode: "max"
+    factor: 0.1
+    patience: 5
+    verbose: true
+  criterion: "CrossEntropyLoss"
+  early_stopping:
+    enabled: true
+    patience: 10
+    min_delta: 0.001
+  resume_from_checkpoint: true
+  gradient_accumulation_steps: 1
+  mixed_precision: true  # AMP for memory efficiency
+
+# Model-specific configs (override batch_size for memory-heavy models)
+models:
+  alexnet:
+    batch_size: 32
+    input_size: 224
+    pretrained: true
+    freeze_backbone: true
+  vgg16:
+    batch_size: 16
+    input_size: 224
+    pretrained: true
+    freeze_backbone: true
+  resnet50:
+    batch_size: 16
+    input_size: 224
+    pretrained: true
+    freeze_backbone: true
+  googlenet:
+    batch_size: 16
+    input_size: 224
+    pretrained: true
+    freeze_backbone: true
+  mobilenet_v2:
+    batch_size: 32
+    input_size: 224
+    pretrained: true
+    freeze_backbone: true
+  densenet121:
+    batch_size: 16
+    input_size: 224
+    pretrained: true
+    freeze_backbone: true
+  squeezenet:
+    batch_size: 32
+    input_size: 224
+    pretrained: true
+    freeze_backbone: true
+  efficientnet_b0:
+    batch_size: 16
+    input_size: 224
+    pretrained: true
+    freeze_backbone: true
+  nasnet_large:
+    batch_size: 8   # Very memory heavy
+    input_size: 331
+    pretrained: true
+    freeze_backbone: true
+  xception:
+    batch_size: 8   # Memory heavy
+    input_size: 299
+    pretrained: true
+    freeze_backbone: true
+
+# Failure handling
+failure_handling:
+  max_retries: 2
+  retry_on_oom: true
+  retry_batch_size_reduction: 0.5  # Reduce batch size by 50% on OOM
+  skip_on_failure: true  # Move to next model if all retries fail
+  log_failures: true
+
+# Profiling
+profiling:
+  enabled: true
+  profile_memory: true
+  profile_time: true
+  flops_analysis: true
+
+# Logging
+logging:
+  use_wandb: false  # Set to true if you have wandb configured
+  wandb_project: "flower-classification"
+  log_interval: 10
+  save_best_model: true
+  save_last_model: true

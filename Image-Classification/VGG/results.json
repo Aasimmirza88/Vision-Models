@@ -1,0 +1,54 @@
+{
+  "model": "vgg16",
+  "final_train_acc": 0.8852213053263316,
+  "final_val_acc": 0.914,
+  "best_val_acc": 0.916,
+  "best_epoch": 24,
+  "final_train_loss": 0.318510903634131,
+  "final_val_loss": 0.26479740210232283,
+  "class_report": {
+    "Lilly": {
+      "precision": 0.85,
+      "recall": 0.8542713567839196,
+      "f1-score": 0.8521303258145363,
+      "support": 199.0
+    },
+    "Lotus": {
+      "precision": 0.8790697674418605,
+      "recall": 0.9264705882352942,
+      "f1-score": 0.9021479713603818,
+      "support": 204.0
+    },
+    "Orchid": {
+      "precision": 0.9259259259259259,
+      "recall": 0.9210526315789473,
+      "f1-score": 0.9234828496042217,
+      "support": 190.0
+    },
+    "Sunflower": {
+      "precision": 0.9798994974874372,
+      "recall": 0.975,
+      "f1-score": 0.9774436090225563,
+      "support": 200.0
+    },
+    "Tulip": {
+      "precision": 0.9390862944162437,
+      "recall": 0.893719806763285,
+      "f1-score": 0.9158415841584159,
+      "support": 207.0
+    },
+    "accuracy": 0.914,
+    "macro avg": {
+      "precision": 0.9147962970542934,
+      "recall": 0.9141028766722894,
+      "f1-score": 0.9142092679920225,
+      "support": 1000.0
+    },
+    "weighted avg": {
+      "precision": 0.9147769209257152,
+      "recall": 0.914,
+      "f1-score": 0.914141792144716,
+      "support": 1000.0
+    }
+  }
+}

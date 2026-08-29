@@ -1,0 +1,561 @@
+{
+  "timestamp": "2026-08-03T10:15:56.023446",
+  "total_time_seconds": 36796.18717312813,
+  "succeeded": [
+    "alexnet",
+    "vgg16",
+    "resnet50",
+    "googlenet",
+    "mobilenet_v2",
+    "densenet121",
+    "squeezenet",
+    "efficientnet_b0",
+    "nasnet_large",
+    "xception"
+  ],
+  "failed": [],
+  "results": {
+    "alexnet": {
+      "model": "alexnet",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.942,
+      "epochs_completed": 30
+    },
+    "vgg16": {
+      "model": "vgg16",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.916,
+      "epochs_completed": 34
+    },
+    "resnet50": {
+      "model": "resnet50",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.943,
+      "epochs_completed": 28
+    },
+    "googlenet": {
+      "model": "googlenet",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.895,
+      "epochs_completed": 25
+    },
+    "mobilenet_v2": {
+      "model": "mobilenet_v2",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.93,
+      "epochs_completed": 27
+    },
+    "densenet121": {
+      "model": "densenet121",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.924,
+      "epochs_completed": 35
+    },
+    "squeezenet": {
+      "model": "squeezenet",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.93,
+      "epochs_completed": 23
+    },
+    "efficientnet_b0": {
+      "model": "efficientnet_b0",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.924,
+      "epochs_completed": 22
+    },
+    "nasnet_large": {
+      "model": "nasnet_large",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.917,
+      "epochs_completed": 23
+    },
+    "xception": {
+      "model": "xception",
+      "failed": false,
+      "failure_reason": null,
+      "best_val_acc": 0.911,
+      "epochs_completed": 36
+    }
+  },
+  "monitor_log": [
+    {
+      "timestamp": "2026-08-03T00:02:39.834010",
+      "level": "INFO",
+      "message": "Starting monitored training pipeline for all models"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:39.834010",
+      "level": "INFO",
+      "message": "Environment: torch126 conda env"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:39.834010",
+      "level": "INFO",
+      "message": "Hardware: GTX 1650 (4GB VRAM)"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:39.834010",
+      "level": "INFO",
+      "message": "Checking environment dependencies..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:39.834010",
+      "level": "SUCCESS",
+      "message": "  torch: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:41.972738",
+      "level": "SUCCESS",
+      "message": "  torchvision: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:44.414936",
+      "level": "SUCCESS",
+      "message": "  timm: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:44.414936",
+      "level": "SUCCESS",
+      "message": "  yaml: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:45.774291",
+      "level": "SUCCESS",
+      "message": "  sklearn: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:46.471627",
+      "level": "SUCCESS",
+      "message": "  seaborn: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:46.471627",
+      "level": "SUCCESS",
+      "message": "  matplotlib: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:46.471627",
+      "level": "SUCCESS",
+      "message": "  numpy: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:47.409735",
+      "level": "SUCCESS",
+      "message": "GPU: NVIDIA GeForce GTX 1650 (4.0 GB)"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:47.409735",
+      "level": "SUCCESS",
+      "message": "Dataset found: E:/GIt_upload/Image_classification/Flowers_dataset"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:47.410747",
+      "level": "SUCCESS",
+      "message": "All environment checks passed"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:47.410747",
+      "level": "INFO",
+      "message": "Pre-downloading pretrained weights for all models..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:47.427245",
+      "level": "INFO",
+      "message": "  Downloading weights for alexnet..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:50.013106",
+      "level": "SUCCESS",
+      "message": "    alexnet: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:50.014389",
+      "level": "INFO",
+      "message": "  Downloading weights for vgg16..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:56.593660",
+      "level": "SUCCESS",
+      "message": "    vgg16: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:56.593660",
+      "level": "INFO",
+      "message": "  Downloading weights for resnet50..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:57.167132",
+      "level": "SUCCESS",
+      "message": "    resnet50: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:57.167132",
+      "level": "INFO",
+      "message": "  Downloading weights for googlenet..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:57.421637",
+      "level": "SUCCESS",
+      "message": "    googlenet: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:57.421637",
+      "level": "INFO",
+      "message": "  Downloading weights for mobilenet_v2..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:57.612792",
+      "level": "SUCCESS",
+      "message": "    mobilenet_v2: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:57.612792",
+      "level": "INFO",
+      "message": "  Downloading weights for densenet121..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:57.950617",
+      "level": "SUCCESS",
+      "message": "    densenet121: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:57.950617",
+      "level": "INFO",
+      "message": "  Downloading weights for squeezenet..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:58.023367",
+      "level": "SUCCESS",
+      "message": "    squeezenet: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:58.023367",
+      "level": "INFO",
+      "message": "  Downloading weights for efficientnet_b0..."
+    },
+    {
+      "timestamp": "2026-08-03T00:02:58.261852",
+      "level": "SUCCESS",
+      "message": "    efficientnet_b0: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:02:58.261852",
+      "level": "INFO",
+      "message": "  Downloading weights for nasnet_large..."
+    },
+    {
+      "timestamp": "2026-08-03T00:03:01.140483",
+      "level": "SUCCESS",
+      "message": "    nasnet_large: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:03:01.140483",
+      "level": "INFO",
+      "message": "  Downloading weights for xception..."
+    },
+    {
+      "timestamp": "2026-08-03T00:03:01.799397",
+      "level": "SUCCESS",
+      "message": "    xception: OK"
+    },
+    {
+      "timestamp": "2026-08-03T00:03:01.799397",
+      "level": "SUCCESS",
+      "message": "Weight pre-download complete"
+    },
+    {
+      "timestamp": "2026-08-03T00:03:01.800394",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T00:03:01.800394",
+      "level": "INFO",
+      "message": "Starting monitored training for: alexnet"
+    },
+    {
+      "timestamp": "2026-08-03T00:03:01.800394",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T00:25:48.549901",
+      "level": "SUCCESS",
+      "message": "alexnet training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T00:25:48.549901",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9420"
+    },
+    {
+      "timestamp": "2026-08-03T00:25:48.707485",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T00:25:48.708894",
+      "level": "INFO",
+      "message": "Starting monitored training for: vgg16"
+    },
+    {
+      "timestamp": "2026-08-03T00:25:48.708894",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T01:51:06.487038",
+      "level": "SUCCESS",
+      "message": "vgg16 training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T01:51:06.487038",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9160"
+    },
+    {
+      "timestamp": "2026-08-03T01:51:06.636643",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T01:51:06.638151",
+      "level": "INFO",
+      "message": "Starting monitored training for: resnet50"
+    },
+    {
+      "timestamp": "2026-08-03T01:51:06.638151",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T02:33:07.906258",
+      "level": "SUCCESS",
+      "message": "resnet50 training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T02:33:07.906258",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9430"
+    },
+    {
+      "timestamp": "2026-08-03T02:33:08.053849",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T02:33:08.053849",
+      "level": "INFO",
+      "message": "Starting monitored training for: googlenet"
+    },
+    {
+      "timestamp": "2026-08-03T02:33:08.054872",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T02:54:04.245283",
+      "level": "SUCCESS",
+      "message": "googlenet training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T02:54:04.245283",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.8950"
+    },
+    {
+      "timestamp": "2026-08-03T02:54:04.388837",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T02:54:04.388837",
+      "level": "INFO",
+      "message": "Starting monitored training for: mobilenet_v2"
+    },
+    {
+      "timestamp": "2026-08-03T02:54:04.389855",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T03:15:34.354608",
+      "level": "SUCCESS",
+      "message": "mobilenet_v2 training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T03:15:34.354608",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9300"
+    },
+    {
+      "timestamp": "2026-08-03T03:15:34.518089",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T03:15:34.519093",
+      "level": "INFO",
+      "message": "Starting monitored training for: densenet121"
+    },
+    {
+      "timestamp": "2026-08-03T03:15:34.519093",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T04:03:12.139927",
+      "level": "SUCCESS",
+      "message": "densenet121 training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T04:03:12.139927",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9240"
+    },
+    {
+      "timestamp": "2026-08-03T04:03:12.298130",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T04:03:12.299408",
+      "level": "INFO",
+      "message": "Starting monitored training for: squeezenet"
+    },
+    {
+      "timestamp": "2026-08-03T04:03:12.299408",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T04:19:26.758370",
+      "level": "SUCCESS",
+      "message": "squeezenet training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T04:19:26.758370",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9300"
+    },
+    {
+      "timestamp": "2026-08-03T04:19:26.886440",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T04:19:26.886440",
+      "level": "INFO",
+      "message": "Starting monitored training for: efficientnet_b0"
+    },
+    {
+      "timestamp": "2026-08-03T04:19:26.887692",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T04:37:35.093820",
+      "level": "SUCCESS",
+      "message": "efficientnet_b0 training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T04:37:35.093820",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9240"
+    },
+    {
+      "timestamp": "2026-08-03T04:37:35.230746",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T04:37:35.230746",
+      "level": "INFO",
+      "message": "Starting monitored training for: nasnet_large"
+    },
+    {
+      "timestamp": "2026-08-03T04:37:35.230746",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T08:07:06.847886",
+      "level": "SUCCESS",
+      "message": "nasnet_large training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T08:07:06.847886",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9170"
+    },
+    {
+      "timestamp": "2026-08-03T08:07:07.005205",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T08:07:07.005205",
+      "level": "INFO",
+      "message": "Starting monitored training for: xception"
+    },
+    {
+      "timestamp": "2026-08-03T08:07:07.005205",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:55.852584",
+      "level": "SUCCESS",
+      "message": "xception training COMPLETED successfully"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:55.852584",
+      "level": "SUCCESS",
+      "message": "  Best Val Acc: 0.9110"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:56.021183",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:56.021183",
+      "level": "INFO",
+      "message": "PIPELINE COMPLETE"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:56.021183",
+      "level": "INFO",
+      "message": "============================================================"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:56.021183",
+      "level": "INFO",
+      "message": "Total time: 10h 13m 16s"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:56.022439",
+      "level": "INFO",
+      "message": "Succeeded: 10/10"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:56.022439",
+      "level": "INFO",
+      "message": "Failed: 0/10"
+    },
+    {
+      "timestamp": "2026-08-03T10:15:56.022439",
+      "level": "SUCCESS",
+      "message": "Successful models: alexnet, vgg16, resnet50, googlenet, mobilenet_v2, densenet121, squeezenet, efficientnet_b0, nasnet_large, xception"
+    }
+  ]
+}

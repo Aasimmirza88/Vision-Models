@@ -1,0 +1,11 @@
+{
+  "model": "nasnet_large",
+  "failed": true,
+  "reason": "Model creation failed: Unknown model (nasnet_large)",
+  "timestamp": "2026-08-02T21:08:22.508007",
+  "batch_size": null,
+  "gpu_memory": {
+    "allocated_GB": 0.0,
+    "reserved_GB": 0.0
+  }
+}
