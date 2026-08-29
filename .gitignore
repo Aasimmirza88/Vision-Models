@@ -2,6 +2,10 @@
 Flowers_dataset/
 **/Flowers_dataset/
 
+# Intermediate training checkpoints
+checkpoint_epoch_*.pth
+**/checkpoint_epoch_*.pth
+
 # Python cache
 __pycache__/
 *.pyc
